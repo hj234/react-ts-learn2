@@ -1,9 +1,23 @@
 import React from "react"
-
-interface Gretting {
-    name: string
+import { Button } from "antd"
+interface Greeting {
+  name: string
+  firstName?: string
+  lastName?: string
 }
 
-const Hello = (props: Gretting) => <h1>Hello {props.name}</h1>
+const Hello = (props: Greeting) => <Button>Hello {props.name}</Button>
+
+// 函数组件
+// const Hello: React.FC<Greeting> = ({
+//     name,
+//     firstName,
+//     lastName,
+// }) => <Button>{name}</Button>
+
+Hello.defaultProps = {
+  firstName: "",
+  lastName: "",
+}
 
 export default Hello

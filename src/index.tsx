@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/demo/Hello';
+import HelloHOC from './components/demo/HelloHOC';
+import HelloHooks from './components/demo/HelloHooks';
+// import HelloClass from './components/demo/HelloClass';
+// import Hello from './components/demo/Hello';
 
 
 ReactDOM.render(
-  <Hello name="Typescript"/>,
+  <HelloHooks name="Typescript"/>,
   document.getElementById('root')
 );
